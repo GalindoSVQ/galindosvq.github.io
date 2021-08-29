@@ -1,0 +1,46 @@
+* {
+  font-size: 50px;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: baseline;
+}
+
+body {
+  background: linear-gradient(to top, #4b2688, #7782c4) no-repeat fixed;
+}
+
+.wave-hand {
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
