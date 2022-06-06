@@ -1,5 +1,3 @@
-### Antonio Galindo | galindosvq.github.io
+## Antonio Galindo | JavaScript Full-Stack Developer
 
-Front End Engineer from Sevilla. This is my personal website repository
-
-Visit [my site](http://galindosvq.com/) or follow [@GalindoSVQ](https://twitter.com/galindosvq) on Twitter.
+[Live](http://galindosvq.com/)
