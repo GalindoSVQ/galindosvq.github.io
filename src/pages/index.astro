@@ -1,14 +1,17 @@
 ---
+import Layout from '../layouts/Layout.astro';
+
+const workStartDate = new Date(2019, 1, 1)
+const now = new Date()
+const years = now.getFullYear() - workStartDate.getFullYear()
 
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="./assets/icons/favicon.svg" />
-		<title>Antonio Galindo | JavaScript Full-Stack Developer</title>
-	</head>
-	<body>
-		<h1>Hello world, this is Antonio Galindo!</h1>
-	</body>
-</html>
+
+<Layout title="Home">
+	<main class="p-11">
+		<p class="text-xl">
+			I'm a JavaScript full stack Engineer who, for the last {years}, has mainly been working with technologies such as
+			JavaScript, TypeScript, Node.
+		</p>
+	</main>
+</Layout>
