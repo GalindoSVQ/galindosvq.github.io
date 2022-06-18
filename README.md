@@ -1,3 +1,5 @@
 ## Antonio Galindo | JavaScript Full-Stack Developer
 
-[Live](http://galindosvq.com/)
+Personal site made with [Astro](https://astro.build/).build and [tailwindcss](https://tailwindcss.com/)
+
+[Live](https://gali.dev/)
