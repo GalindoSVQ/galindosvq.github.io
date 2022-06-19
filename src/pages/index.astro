@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const workStartDate = new Date(2019, 1, 1)
 const now = new Date()
@@ -7,11 +7,11 @@ const years = now.getFullYear() - workStartDate.getFullYear()
 
 ---
 
-<Layout title="Home">
+<BaseLayout title="Home">
 	<main class="p-11">
 		<p class="text-xl">
 			I'm a JavaScript full stack Engineer who, for the last {years}, has mainly been working with technologies such as
 			JavaScript, TypeScript, Node.
 		</p>
 	</main>
-</Layout>
+</BaseLayout>

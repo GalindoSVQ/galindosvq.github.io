@@ -3,14 +3,15 @@ import "../styles/global.css";
 import Header from "./Header.astro"
 import Footer from "./Footer.astro"
 import Navbar from "./Navbar.astro"
-import { CONSTANTS } from "../utils/constants"
+import CONSTANTS from "../utils/constants"
 
 export interface Props {
-  title: string;
+  title?: string;
+  description?: string;
 }
 
-const { title = "JavaScript Full-Stack" } = Astro.props as Props;
-const { defaultTitle } = CONSTANTS;
+const { defaultTitle, defaultDescription } = CONSTANTS;
+const { title = "JavaScript Full Stack", description = defaultDescription } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -18,7 +19,8 @@ const { defaultTitle } = CONSTANTS;
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name='description' content={description} />
   <link rel="icon" type="image/x-icon" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
