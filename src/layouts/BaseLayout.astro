@@ -10,6 +10,7 @@ export interface Props {
   description?: string;
 }
 
+const { GOOGLE_MEASUREMENT_ID, GOOGLE_MEASUREMENT_URL } = import.meta.env;
 const { defaultTitle, defaultDescription } = CONSTANTS;
 const { title = "JavaScript Full Stack", description = defaultDescription } = Astro.props as Props;
 ---
@@ -31,6 +32,15 @@ const { title = "JavaScript Full Stack", description = defaultDescription } = As
     rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
   <title>{defaultTitle} {title}</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src={GOOGLE_MEASUREMENT_URL}></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', { GOOGLE_MEASUREMENT_ID });
+    </script>
 </head>
 
 <body class="flex flex-col min-h-screen bg-white">
