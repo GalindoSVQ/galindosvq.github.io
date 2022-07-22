@@ -1,4 +1,5 @@
 ---
+import ProfilePicture from '@components/ProfilePicture.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const workStartDate = new Date(2019, 1, 1)
@@ -8,10 +9,11 @@ const years = now.getFullYear() - workStartDate.getFullYear()
 ---
 
 <BaseLayout title="Home">
-	<main class="p-11">
-		<p class="text-xl">
+	<main class="flex flex-col flex-nowrap p-4 items-center gap-4">
+		<ProfilePicture imgSrc="assets/images/profile.jpg" alt="Selfie as profile picture" />
+		<p class="w-96 sm:w-7/12 text-justify p-3 sm:p-0">
 			I'm a JavaScript full stack Engineer who, for the last {years}, has mainly been working with technologies such as
-			JavaScript, TypeScript, Node.
+			TypeScript, React, Node.js, Redux, GraphQL, Apollo, Next.js, and more.
 		</p>
 	</main>
 </BaseLayout>
